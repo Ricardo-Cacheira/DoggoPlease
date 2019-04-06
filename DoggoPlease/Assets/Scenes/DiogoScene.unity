@@ -1854,7 +1854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundtrackEvent: event:/soundtrack/gameST
-  volume: 100
+  volume: 50
 --- !u!114 &986793501
 MonoBehaviour:
   m_ObjectHideFlags: 0
