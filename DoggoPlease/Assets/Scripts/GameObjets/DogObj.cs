@@ -13,8 +13,12 @@ public class DogObj : MonoBehaviour
     private List<string> traits = new List<string>();
     private List<int> values = new List<int>();
 
-	private bool hasBarked;
-
+    public Image imageComp;
+    public Text nameComp;
+    public Text sizeComp;
+    public Text ageComp;
+    public Text genderComp;
+    public Text traitsComp;
 
     private void Start()
     {
@@ -24,13 +28,7 @@ public class DogObj : MonoBehaviour
         sizeComp = transform.GetChild(3).GetComponent<Text>();
         genderComp = transform.GetChild(4).GetComponent<Text>();
         traitsComp = transform.GetChild(5).GetComponent<Text>();
-        //    traits = GetComponentInChildren<Text>().text;		
-		
-		//FMOD
-		hasBarked = false;
-		traitTest = 0;
-		
-
+        //    traits = GetComponentInChildren<Text>().text;
 
 
     }
@@ -69,9 +67,8 @@ public class DogObj : MonoBehaviour
             
             Debug.Log(traits[i]);
         }
-		
-		//FMOD
-		FMODBark(size);
 
-	}		
+        
+
+    }
 }
