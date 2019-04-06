@@ -106,7 +106,7 @@ public class testCycle : MonoBehaviour
                 }
                 if (picked)
                 {   if(pickednumber == 1)
-                    family1.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, family1.transform.position.z);
+                        family1.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, family1.transform.position.z);
                     if (pickednumber == 2)
                         family2.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, family2.transform.position.z);
                     if (pickednumber == 3)
