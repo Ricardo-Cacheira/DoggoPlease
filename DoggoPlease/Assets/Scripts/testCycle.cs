@@ -74,13 +74,17 @@ public class testCycle : MonoBehaviour
                     picked = true;
                     dogImage.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, dogImage.transform.position.z);
                 }
+                else if (picked)
+                {
+                    dogImage.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, dogImage.transform.position.z);
+                }
             }
         }
         else if (!hovering)
         {
             dogImage.transform.position = previousPos;
         }
-        else 
+        else
             picked = false;
 
     }
