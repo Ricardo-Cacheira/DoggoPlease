@@ -24,6 +24,7 @@ public class DogObj : MonoBehaviour
 	FMOD.Studio.EventInstance bark; 
 	private bool hasBarked; 
 	private int traitTest; 
+	public int typingSecs;
 
     private void Start()
     {
@@ -38,6 +39,7 @@ public class DogObj : MonoBehaviour
 		//FMOD 
 		hasBarked = false; 
 		traitTest = 0;
+		
     }
 
     public void Setup(Dog dog)
@@ -123,8 +125,20 @@ public class DogObj : MonoBehaviour
 				hasBarked = true; 
 			} 
 			traitTest=traitTest+1; 
-		}  
+		}
+		
+		if(hasBarked==true){
+			StartCoroutine(waitStop());
+		}
+			
+		
 	}
+	
+	IEnumerator waitStop(){
+		yield return new WaitForSeconds(typingSecs);
+		bark.setParameterValue("stopType",1);
+	}
+	
 	void OnDestroy() 
     { 
         bark.release(); 	
