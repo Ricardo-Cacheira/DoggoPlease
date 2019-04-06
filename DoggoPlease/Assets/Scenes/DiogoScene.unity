@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2086107646}
   data: {fileID: 11400000, guid: 0dbce52198a159444b2b3e38123737bc, type: 2}
-  dogImage: {fileID: 194820396}
+  dogImage: {fileID: 495286915}
   sprites:
   - {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
@@ -177,9 +177,10 @@ GameObject:
   - component: {fileID: 194820400}
   - component: {fileID: 194820399}
   - component: {fileID: 194820401}
+  - component: {fileID: 194820402}
   m_Layer: 5
   m_Name: DogImage
-  m_TagString: Dog
+  m_TagString: Dawg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -288,6 +289,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &194820402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194820396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ced8ced113f5544eba0a2f97afa3c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &199980234
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,11 +881,12 @@ GameObject:
   - component: {fileID: 495286916}
   - component: {fileID: 495286918}
   - component: {fileID: 495286917}
-  - component: {fileID: 495286919}
   - component: {fileID: 495286920}
+  - component: {fileID: 495286921}
+  - component: {fileID: 495286919}
   m_Layer: 5
   m_Name: Family1
-  m_TagString: Untagged
+  m_TagString: Dog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -962,6 +976,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 180, y: 140, z: 50}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &495286921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495286915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87cffe9168198bf4ca3e2e6f0b5b6d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cycle: {fileID: 189581838}
 --- !u!1 &505268376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,6 +1614,9 @@ GameObject:
   - component: {fileID: 986793498}
   - component: {fileID: 986793497}
   - component: {fileID: 986793496}
+  - component: {fileID: 986793500}
+  - component: {fileID: 986793501}
+  - component: {fileID: 986793499}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1658,6 +1688,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &986793499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986793495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
+--- !u!114 &986793500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986793495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcbafb5e9b97ef24ca4ac4dd69820d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundtrackEvent: event:/soundtrack/gameST
+  volume: 100
+--- !u!114 &986793501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986793495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b12743ca3cec80f419334850c114addb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundtrackEvent: event:/ambient
+  volume: 100
 --- !u!1 &1059109068
 GameObject:
   m_ObjectHideFlags: 0

@@ -53,20 +53,20 @@ public class FamilieObj : MonoBehaviour
 
     private void OnTriggerStay(Collider collision)
     {
-          if (collision.transform.CompareTag("Dog"))
+          if (collision.transform.CompareTag("Dawg"))
            {
             testCycle cycle = collision.transform.GetComponent<DogImageScript>().Cycle;
             cycle.hovering = true;
             if (!cycle.picked){
                 cycle.GenerateDog("Another Doggo");
-                collision.transform.position = cycle.previousPos;
+                transform.position = cycle.previousPos;
                 cycle.GenerateFamily(transform);
             }
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.CompareTag("Dog"))
+        if (other.transform.CompareTag("Dawg"))
         {
             testCycle cycle = other.transform.GetComponent<DogImageScript>().Cycle;
             cycle.hovering = false;
