@@ -23,6 +23,29 @@ public class TraitsDatabase : ScriptableObject
 		return list.ToArray();
 	}
 
+	public int EvaluteMatch(List<Trait> dog, List<Trait> family, List<Trait> preferences)
+	{
+		int points = 0;
+
+		//check good
+		foreach (var d in dog)
+		{
+			foreach (var f in family)
+			{
+				if(d.bestMatches.Contains(f)) {points++;}
+				else if(d.badMatches.Contains(f)) {points--;}
+					
+			}
+		}
+
+		foreach (var p in preferences)
+		{
+			if(dog.Contains(p)) {points++;}
+		}
+
+		return points;
+	}
+
     public Trait GetNewTrait(List<Trait> previous, bool dog)
     {
         Trait n = RandomTrait(dog);

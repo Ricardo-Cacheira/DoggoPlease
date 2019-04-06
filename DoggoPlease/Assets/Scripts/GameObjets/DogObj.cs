@@ -37,8 +37,7 @@ public class DogObj : MonoBehaviour
 
 		//FMOD 
 		hasBarked = false; 
-		traitTest = 0; 
-
+		traitTest = 0;
     }
 
     public void Setup(Dog dog)

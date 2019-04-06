@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114477940789135758}
-  - {fileID: 114093214865237408}
+  - {fileID: 114122761204365708}
   EditorEvents:
   - {fileID: 114189771416012588}
   - {fileID: 114203783858642940}
   - {fileID: 114103395912808424}
   - {fileID: 114795792848017448}
   MasterBanks:
-  - {fileID: 114093214865237408}
+  - {fileID: 114122761204365708}
   StringsBanks:
   - {fileID: 114477940789135758}
-  stringsBankWriteTime: 636901499056122508
+  stringsBankWriteTime: 636901525194638823
   cacheVersion: 3
 --- !u!114 &114005651791493770
 MonoBehaviour:
@@ -65,7 +65,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 4204352
-  Exists: 1
+  Exists: 0
 --- !u!114 &114103395912808424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,15 +81,35 @@ MonoBehaviour:
   Path: event:/dogs/big
   guid: 9a87e59531a16d408d2d1463fced0c36
   Banks:
-  - {fileID: 114093214865237408}
+  - {fileID: 114122761204365708}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114866264990005276}
+  - {fileID: 114599389418187002}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114122761204365708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\ricar\GitHub\DoggoPlease\DoggoPlease\Assets\FMOD_banks\Desktop\Master
+    Bank.bank
+  lastModified: 636901525194599274
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 4204352
+  Exists: 1
 --- !u!114 &114156838960930962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,15 +141,31 @@ MonoBehaviour:
   Path: event:/dogs/medium
   guid: 56d01c897d624a46855e1d37ea5a2a1a
   Banks:
-  - {fileID: 114093214865237408}
+  - {fileID: 114122761204365708}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114379206947693474}
+  - {fileID: 114193582840449516}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114193582840449516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: trait
+  Min: 0
+  Max: 4.5
+  Default: 0
 --- !u!114 &114203783858642940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,15 +181,31 @@ MonoBehaviour:
   Path: event:/ambient
   guid: 7d3aac2e112059429664a164cbc5f7da
   Banks:
-  - {fileID: 114093214865237408}
+  - {fileID: 114122761204365708}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114610352059949240}
+  - {fileID: 114282436708392194}
   MinDistance: 0
   MaxDistance: 0
   Length: 174554
+--- !u!114 &114282436708392194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: shelterCap
+  Min: 0
+  Max: 80
+  Default: 0
 --- !u!114 &114379206947693474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,12 +235,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD_banks\Desktop\Master Bank.strings.bank
-  lastModified: 636901499056122508
+  lastModified: 636901525194638823
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 852
   Exists: 1
+--- !u!114 &114512874979294678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: trait
+  Min: 0
+  Max: 4.5
+  Default: 0
 --- !u!114 &114521803903370840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +300,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114599389418187002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: trait
+  Min: 0
+  Max: 4.5
+  Default: 0
 --- !u!114 &114610352059949240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,12 +347,12 @@ MonoBehaviour:
   Path: event:/dogs/smol
   guid: d382000ffcce2b4e9af2f9df00dab72b
   Banks:
-  - {fileID: 114093214865237408}
+  - {fileID: 114122761204365708}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114156838960930962}
+  - {fileID: 114512874979294678}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
