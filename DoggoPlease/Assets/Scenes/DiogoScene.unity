@@ -1587,6 +1587,9 @@ GameObject:
   - component: {fileID: 986793498}
   - component: {fileID: 986793497}
   - component: {fileID: 986793496}
+  - component: {fileID: 986793500}
+  - component: {fileID: 986793501}
+  - component: {fileID: 986793499}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1658,6 +1661,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &986793499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986793495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
+--- !u!114 &986793500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986793495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcbafb5e9b97ef24ca4ac4dd69820d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundtrackEvent: event:/soundtrack/gameST
+  volume: 100
+--- !u!114 &986793501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986793495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b12743ca3cec80f419334850c114addb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundtrackEvent: event:/ambient
+  volume: 100
 --- !u!1 &1059109068
 GameObject:
   m_ObjectHideFlags: 0
