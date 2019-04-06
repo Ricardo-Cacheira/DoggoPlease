@@ -24,7 +24,7 @@ public class DogObj : MonoBehaviour
 	FMOD.Studio.EventInstance bark; 
 	private bool hasBarked; 
 	private int traitTest; 
-	public int typingSecs;
+	public float typingSecs;
 
     private void Start()
     {

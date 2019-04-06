@@ -3178,7 +3178,7 @@ MonoBehaviour:
   ageComp: {fileID: 0}
   genderComp: {fileID: 0}
   traitsComp: {fileID: 0}
-  typingSecs: 2
+  typingSecs: 1.2
 --- !u!114 &1910768185
 MonoBehaviour:
   m_ObjectHideFlags: 0
