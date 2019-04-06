@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88479f8ad12b01147adf810d9e79dfed, type: 3}
-  m_Name: Playful
+  m_Name: Needy
   m_EditorClassIdentifier: 
-  name: Playful
-  value: 1
-  conflicting:
-  - {fileID: 11400000, guid: 8b621148513143a4e98040a4cb875282, type: 2}
-  bestMatches:
-  - {fileID: 11400000, guid: fbbd1564c19bf554ea231aeed4e89dc4, type: 2}
-  badMatches: []
+  name: 
+  value: 0
+  conflicting: []
+  bestMatches: []
+  badMatches:
+  - {fileID: 11400000, guid: 8555d88eaca6e6b4ab165f71b0da15a5, type: 2}
