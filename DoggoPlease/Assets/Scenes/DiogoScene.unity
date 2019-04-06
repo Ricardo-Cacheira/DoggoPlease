@@ -372,8 +372,8 @@ GameObject:
   m_Component:
   - component: {fileID: 244733182}
   - component: {fileID: 244733185}
-  - component: {fileID: 244733183}
   - component: {fileID: 244733184}
+  - component: {fileID: 244733183}
   - component: {fileID: 244733186}
   m_Layer: 5
   m_Name: Family3
@@ -2676,6 +2676,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 523fb8df083691b41ae6b40dc7a870ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageComp: {fileID: 0}
+  nameComp: {fileID: 0}
+  sizeComp: {fileID: 0}
+  ageComp: {fileID: 0}
+  genderComp: {fileID: 0}
+  traitsComp: {fileID: 0}
 --- !u!114 &1910768185
 MonoBehaviour:
   m_ObjectHideFlags: 0

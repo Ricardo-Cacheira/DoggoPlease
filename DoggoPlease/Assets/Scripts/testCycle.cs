@@ -42,7 +42,7 @@ public class testCycle : MonoBehaviour
 
     public void GenerateDog(string name)
     {
-        Dog currentDog = new Dog(name, sprites[Random.Range(0, 4)], Random.Range(0, 20), getRandomSize(), true, data.GetList(true, 1));
+        Dog currentDog = new Dog(name, sprites[Random.Range(0, 4)], Random.Range(0, 20), getRandomSize(), true, data.GetList(true, 2));
         DogObj dogObjScript = dogObj.GetComponent<DogObj>();
         dogObjScript.Setup(currentDog);
     }
