@@ -85,24 +85,28 @@ public class testCycle : MonoBehaviour
                     pickednumber = 1;
                     picked = true;
                     family1.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, family1.transform.position.z);
+					FMODUnity.RuntimeManager.PlayOneShot("event:/paperPickUp", transform.position);
                 }
                 if (hitinfo.transform.CompareTag("Family1") && !picked)
                 {
                     pickednumber = 2;
                     picked = true;
                     family2.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, family2.transform.position.z);
+					FMODUnity.RuntimeManager.PlayOneShot("event:/paperPickUp", transform.position);
                 }
                 if (hitinfo.transform.CompareTag("Family2") && !picked)
                 {
                     pickednumber = 3;
                     picked = true;
                     family3.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, family3.transform.position.z);
+					FMODUnity.RuntimeManager.PlayOneShot("event:/paperPickUp", transform.position);
                 }
                 if (hitinfo.transform.CompareTag("Family3") && !picked)
                 {
                     pickednumber = 4;
                     picked = true;
                     family4.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, family4.transform.position.z);
+					FMODUnity.RuntimeManager.PlayOneShot("event:/paperPickUp", transform.position);
                 }
                 if (picked)
                 {   if(pickednumber == 1)
