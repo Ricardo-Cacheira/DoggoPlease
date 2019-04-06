@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 114477940789135758}
+  - {fileID: 114937955022914416}
+  EditorEvents:
+  - {fileID: 114581673747099826}
+  MasterBanks:
+  - {fileID: 114937955022914416}
+  StringsBanks:
+  - {fileID: 114477940789135758}
+  stringsBankWriteTime: 636901109381296950
+  cacheVersion: 3
+--- !u!114 &114005651791493770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\JT\Desktop\DOGGO\Doggo-Please\Doggo_please\Assets\FMOD_banks\Desktop\Master
+    Bank.bank
+  lastModified: 636901084129116522
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 13116
+  Exists: 1
+--- !u!114 &114477940789135758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets\FMOD_banks\Desktop\Master Bank.strings.bank
+  lastModified: 636901109381296950
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 714
+  Exists: 1
+--- !u!114 &114521803903370840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\diogo\Documents\Doggo-Please\Doggo_please\Assets\FMOD_banks\Desktop\Master
+    Bank.bank
+  lastModified: 636901157396297909
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 13116
+  Exists: 0
+--- !u!114 &114581673747099826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/test
+  guid: d382000ffcce2b4e9af2f9df00dab72b
+  Banks:
+  - {fileID: 114937955022914416}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114837225041111924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\ricar\GitHub\Doggo-Please\Doggo_please\Assets\FMOD_banks\Desktop\Master
+    Bank.bank
+  lastModified: 636901109381256786
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 13116
+  Exists: 1
+--- !u!114 &114937955022914416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\ricar\GitHub\Doggo-Please\Doggo_please\Assets\FMOD_banks\Desktop\Master
+    Bank.bank
+  lastModified: 636901109381256786
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 13116
+  Exists: 1
+--- !u!114 &114973437444021678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\diogo\Documents\Doggo, Please\Doggo-Please\Doggo_please\Assets\FMOD_banks\Desktop\Master
+    Bank.bank
+  lastModified: 636901111403013996
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 13116
+  Exists: 0
