@@ -80,25 +80,25 @@ public class testCycle : MonoBehaviour
         {
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hitinfo))
             {
-                if (hitinfo.transform.CompareTag("Dog"))
+                if (hitinfo.transform.CompareTag("Dog") && !picked)
                 {
                     pickednumber = 1;
                     picked = true;
                     family1.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, family1.transform.position.z);
                 }
-                if (hitinfo.transform.CompareTag("Family1"))
+                if (hitinfo.transform.CompareTag("Family1") && !picked)
                 {
                     pickednumber = 2;
                     picked = true;
                     family2.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, family2.transform.position.z);
                 }
-                if (hitinfo.transform.CompareTag("Family2"))
+                if (hitinfo.transform.CompareTag("Family2") && !picked)
                 {
                     pickednumber = 3;
                     picked = true;
                     family3.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, family3.transform.position.z);
                 }
-                if (hitinfo.transform.CompareTag("Family3"))
+                if (hitinfo.transform.CompareTag("Family3") && !picked)
                 {
                     pickednumber = 4;
                     picked = true;
@@ -118,6 +118,7 @@ public class testCycle : MonoBehaviour
         }
         else if (!hovering)
         {
+            picked = false;
             if (pickednumber == 1)
                 family1.transform.position = previousPos;
             if (pickednumber == 2)
