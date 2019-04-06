@@ -27,7 +27,7 @@ public class testCycle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        familyObj = canvas.transform.GetChild(2);
+        familyObj = canvas.transform.GetChild(4);
         dogObj = canvas.transform.GetChild(1);
         previousPos = family1.transform.position;
         previousPos2 = family2.transform.position;
@@ -87,21 +87,21 @@ public class testCycle : MonoBehaviour
                     family1.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, family1.transform.position.z);
 					FMODUnity.RuntimeManager.PlayOneShot("event:/paperPickUp", transform.position);
                 }
-                if (hitinfo.transform.CompareTag("Family1")&& !picked)
+                if (hitinfo.transform.CompareTag("Family1") && !picked)
                 {
                     pickednumber = 2;
                     picked = true;
                     family2.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, family2.transform.position.z);
 					FMODUnity.RuntimeManager.PlayOneShot("event:/paperPickUp", transform.position);
                 }
-                if (hitinfo.transform.CompareTag("Family2")&& !picked)
+                if (hitinfo.transform.CompareTag("Family2") && !picked)
                 {
                     pickednumber = 3;
                     picked = true;
                     family3.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, family3.transform.position.z);
 					FMODUnity.RuntimeManager.PlayOneShot("event:/paperPickUp", transform.position);
                 }
-                if (hitinfo.transform.CompareTag("Family3")&& !picked)
+                if (hitinfo.transform.CompareTag("Family3") && !picked)
                 {
                     pickednumber = 4;
                     picked = true;
@@ -122,7 +122,7 @@ public class testCycle : MonoBehaviour
         }
         else if (!hovering)
         {
-			picked = false;
+            picked = false;
             if (pickednumber == 1)
                 family1.transform.position = previousPos;
             if (pickednumber == 2)
