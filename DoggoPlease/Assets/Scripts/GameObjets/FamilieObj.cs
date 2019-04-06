@@ -59,7 +59,14 @@ public class FamilieObj : MonoBehaviour
             cycle.hovering = true;
             if (!cycle.picked){
                 cycle.GenerateDog("Another Doggo");
-                transform.position = cycle.previousPos;
+                if (cycle.pickednumber == 1)
+                    transform.position = cycle.previousPos;
+                if (cycle.pickednumber == 2)
+                    transform.position = cycle.previousPos2;
+                if (cycle.pickednumber == 3)
+                    transform.position = cycle.previousPos3;
+                if (cycle.pickednumber == 4)
+                    transform.position = cycle.previousPos4;
                 cycle.GenerateFamily(transform);
             }
         }

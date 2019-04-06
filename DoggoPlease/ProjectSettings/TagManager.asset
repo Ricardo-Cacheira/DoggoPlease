@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Dog
   - Dawg
+  - Family1
+  - Family2
+  - Family3
   layers:
   - Default
   - TransparentFX
