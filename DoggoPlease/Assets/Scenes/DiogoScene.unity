@@ -422,7 +422,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3339a26c01292b44fa39fcfe27c46271, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -946,9 +946,9 @@ GameObject:
   - component: {fileID: 495286916}
   - component: {fileID: 495286918}
   - component: {fileID: 495286917}
-  - component: {fileID: 495286919}
   - component: {fileID: 495286920}
   - component: {fileID: 495286921}
+  - component: {fileID: 495286919}
   m_Layer: 5
   m_Name: Family1
   m_TagString: Dog
@@ -1489,7 +1489,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 07e1f3670b0957942988421b97b70636, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2324,7 +2324,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 94e2b82851a436a41a1314c341299835, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2736,7 +2736,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 059a138f63535454b811b13325a26abb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3206,6 +3206,7 @@ MonoBehaviour:
   ageComp: {fileID: 0}
   genderComp: {fileID: 0}
   traitsComp: {fileID: 0}
+  typingSecs: 2
 --- !u!114 &1910768185
 MonoBehaviour:
   m_ObjectHideFlags: 0
