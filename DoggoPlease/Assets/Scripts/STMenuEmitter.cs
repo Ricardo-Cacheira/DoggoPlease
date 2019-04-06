@@ -6,7 +6,8 @@ public class STMenuEmitter : MonoBehaviour
 {
     [FMODUnity.EventRef]
     public string soundtrackEvent;
-	FMOD.Studio.EventInstance soundtrack;
+	public FMOD.Studio.EventInstance soundtrack;
+
 	
 	[Range(0,100)]
 	public int volume;
@@ -18,10 +19,6 @@ public class STMenuEmitter : MonoBehaviour
 		
 		soundtrack.setParameterValue("STVolume", volume);
     }
-	
-	void Update(){
-		soundtrack.setParameterValue("STVolume", volume);
-	}
 	
 	void OnDestroy()
     {

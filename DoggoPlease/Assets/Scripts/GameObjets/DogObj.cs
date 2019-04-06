@@ -89,10 +89,10 @@ public class DogObj : MonoBehaviour
 			bark = FMODUnity.RuntimeManager.CreateInstance("event:/dogs/big"); 
 			bark.start(); 
 		}else if(size=="Medium"){ 
-			bark = FMODUnity.RuntimeManager.CreateInstance("event:/dogs/big"); 
+			bark = FMODUnity.RuntimeManager.CreateInstance("event:/dogs/medium"); 
 			bark.start(); 
 		}else if(size=="Small"){ 
-			bark = FMODUnity.RuntimeManager.CreateInstance("event:/dogs/big"); 
+			bark = FMODUnity.RuntimeManager.CreateInstance("event:/dogs/smol"); 
 			bark.start(); 
 		}else{ 
 			Debug.Log("Size error - must be 'big','medium',or 'small' - CASE SENSITIVE"); 
