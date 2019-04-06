@@ -35,5 +35,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-DoggoPlease/fmod_editor.log
-DoggoPlease/fmod_editor.log
+Assets/FMODStudioCache.asset
+Assets/FMODStudioCache.asset.meta
+fmod.log
+fmod_editor.log
