@@ -27,7 +27,7 @@ public class testCycle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        familyObj = canvas.transform.GetChild(0);
+        familyObj = canvas.transform.GetChild(2);
         dogObj = canvas.transform.GetChild(1);
         previousPos = family1.transform.position;
         previousPos2 = family2.transform.position;
@@ -106,7 +106,7 @@ public class testCycle : MonoBehaviour
                 }
                 if (picked)
                 {   if(pickednumber == 1)
-                    family1.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, family1.transform.position.z);
+                        family1.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, family1.transform.position.z);
                     if (pickednumber == 2)
                         family2.transform.position = new Vector3(hitinfo.point.x, hitinfo.point.y, family2.transform.position.z);
                     if (pickednumber == 3)

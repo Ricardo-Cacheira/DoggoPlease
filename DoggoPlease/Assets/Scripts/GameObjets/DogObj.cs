@@ -28,12 +28,12 @@ public class DogObj : MonoBehaviour
 
     private void Start()
     {
-        imageComp = transform.GetChild(0).GetComponent<Image>();
-        nameComp = transform.GetChild(1).GetComponent<Text>();
-        ageComp = transform.GetChild(2).GetComponent<Text>();
-        sizeComp = transform.GetChild(3).GetComponent<Text>();
-        genderComp = transform.GetChild(4).GetComponent<Text>();
-        traitsComp = transform.GetChild(5).GetComponent<Text>();
+        imageComp = transform.GetChild(1).GetComponent<Image>();
+        nameComp = transform.GetChild(2).GetComponent<Text>();
+        ageComp = transform.GetChild(3).GetComponent<Text>();
+        sizeComp = transform.GetChild(4).GetComponent<Text>();
+        genderComp = transform.GetChild(5).GetComponent<Text>();
+        traitsComp = transform.GetChild(6).GetComponent<Text>();
         //    traits = GetComponentInChildren<Text>().text;
 
 		//FMOD 
