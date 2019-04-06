@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88479f8ad12b01147adf810d9e79dfed, type: 3}
-  m_Name: Agressive
+  m_Name: Noisy
   m_EditorClassIdentifier: 
-  name: Agressive
-  value: 1
+  name: Noisy
+  value: 0
   conflicting:
-  - {fileID: 11400000, guid: 29276d9cb7f427243acb49eb14f64c83, type: 2}
   - {fileID: 11400000, guid: 6be9d7737cfe9434b9c9305dd380718c, type: 2}

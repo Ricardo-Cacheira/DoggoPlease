@@ -13,6 +13,16 @@ public class TraitsDatabase : ScriptableObject
 
 	private static System.Random rnd = new System.Random();
 
+	public Trait[] GetList(bool dog, int amount)
+	{
+		List<Trait> list = new List<Trait>();
+		for (int i = 0; i < amount; i++)
+		{
+			list.Add(GetNewTrait(list, dog));
+		}
+		return list.ToArray();
+	}
+
     public Trait GetNewTrait(List<Trait> previous, bool dog)
     {
         Trait n = RandomTrait(dog);
@@ -28,8 +38,12 @@ public class TraitsDatabase : ScriptableObject
     {
         bool i = false;
         
-        if(check.Contains(n))
-            i = true;
+        foreach (var t in check)
+		{
+			if(t == n) {i = true; break;}
+
+			if(n.conflicting.Contains(t)){i = true; break;}
+		}
 
         return i;
     }

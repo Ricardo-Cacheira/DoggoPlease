@@ -10,7 +10,7 @@ public class Trait : ScriptableObject
     public string name;
     public int value;
 
-    public Trait[] conflicting;
+    public List<Trait> conflicting;
 
     public virtual Trait GetCopy()
 	{

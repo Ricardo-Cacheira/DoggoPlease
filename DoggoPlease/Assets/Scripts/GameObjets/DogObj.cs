@@ -13,12 +13,12 @@ public class DogObj : MonoBehaviour
     private List<string> traits = new List<string>();
     private List<int> values = new List<int>();
 
-    private Image imageComp;
-    private Text nameComp;
-    private Text sizeComp;
-    private Text ageComp;
-    private Text genderComp;
-    private Text traitsComp;
+    public Image imageComp;
+    public Text nameComp;
+    public Text sizeComp;
+    public Text ageComp;
+    public Text genderComp;
+    public Text traitsComp;
 
     private void Start()
     {
@@ -64,7 +64,11 @@ public class DogObj : MonoBehaviour
                 traitsComp.text += " " + traits[i];
             else
                 traitsComp.text += traits[i];
+            
+            Debug.Log(traits[i]);
         }
+
+        
 
     }
 }
