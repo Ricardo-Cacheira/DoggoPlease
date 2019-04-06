@@ -19,10 +19,10 @@ public class FamilieObj : MonoBehaviour
     private Family currentFam;
     private void Start()
     {
-        imageComp = transform.GetChild(0).GetComponent<Image>();
-        aggregateComp = transform.GetChild(1).GetComponent<Text>();
-        residenceComp = transform.GetChild(2).GetComponent<Text>();
-        traitComp = transform.GetChild(3).GetComponent<Text>();
+        imageComp = transform.GetChild(1).GetComponent<Image>();
+        aggregateComp = transform.GetChild(2).GetComponent<Text>();
+        residenceComp = transform.GetChild(3).GetComponent<Text>();
+        traitComp = transform.GetChild(4).GetComponent<Text>();
     }
 
     public void Setup(Family fam)

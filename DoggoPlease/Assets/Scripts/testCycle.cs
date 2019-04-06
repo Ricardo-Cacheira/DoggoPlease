@@ -27,7 +27,7 @@ public class testCycle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        familyObj = canvas.transform.GetChild(0);
+        familyObj = canvas.transform.GetChild(2);
         dogObj = canvas.transform.GetChild(1);
         previousPos = family1.transform.position;
         previousPos2 = family2.transform.position;
