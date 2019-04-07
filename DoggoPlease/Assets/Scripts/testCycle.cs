@@ -58,7 +58,7 @@ public class testCycle : MonoBehaviour
 
     public void GenerateFamily(Transform t)
     {
-        Family currentFam = new Family(Random.Range(1, 5), getRandomSize(), spritesH[Random.Range(0, 11)], data.GetList(false,2), data.GetList(true,1));
+        Family currentFam = new Family(Random.Range(1, 5), getRandomSize(), spritesH[Random.Range(0, 10)], data.GetList(false,2), data.GetList(true,1));
         FamilieObj familyObjScript = t.GetComponent<FamilieObj>();
         familyObjScript.Setup(currentFam);
         families.Add(currentFam);
@@ -79,7 +79,7 @@ public class testCycle : MonoBehaviour
     {
         if (dogqueue.Count < numberofdogsperday)
         {
-            //Dog currentDog = new Dog(name, sprites[Random.Range(0, 4)], Random.Range(0, 20), getRandomSize(), true, data.GetList(true, 2));
+            Dog currentDog = new Dog(name, spritesD[Random.Range(0, 4)], Random.Range(0, 20), getRandomSize(), true, data.GetList(true, 2));
             DogObj dogObjScript = dogObj.GetComponent<DogObj>();
             dogsinthisday += 1;
             //dogqueue.Add(currentDog);
