@@ -19,8 +19,19 @@ public class FamilieObj : MonoBehaviour
     private Text preferencesComp;
 
     private Family currentFam;
+    public GameObject dog;
+    private Animator dogAnimator;
+    private float timer;
+    private bool animation;
+    private testCycle cycle;
+    private Vector3 origPos;
+    private Transform parent;
+
     private void Start()
     {
+        parent = transform.parent;
+        origPos = dog.transform.position;
+        dogAnimator = dog.GetComponent<Animator>();
         imageComp = transform.GetChild(1).GetComponent<Image>();
         aggregateComp = transform.GetChild(2).GetComponent<Text>();
         residenceComp = transform.GetChild(3).GetComponent<Text>();
@@ -54,14 +65,29 @@ public class FamilieObj : MonoBehaviour
             else
                 traitComp.text += traits[i];
         }
-        preferencesComp.text = "";
-        for (int i = 0; i < preferences.Count; i++) {
-            if (i > 0)
-                preferencesComp.text += " " + preferences[i];
-            else
-                preferencesComp.text += preferences[i];
-        }
+        //preferencesComp.text = "";
+        //for (int i = 0; i < preferences.Count; i++) {
+        //    if (i > 0)
+        //        preferencesComp.text += " " + preferences[i];
+        //    else
+        //        preferencesComp.text += preferences[i];
+        //}
         currentFam = fam;
+
+    }
+
+    private void Update()
+    {
+        if (animation)
+        {
+            timer += 0.1f;
+            if (timer > 3f)
+            {
+                GenerateNewSet(cycle);
+                animation = false;
+                timer = 0;
+            }
+        }
 
     }
 
@@ -69,22 +95,41 @@ public class FamilieObj : MonoBehaviour
     {
         if (collision.transform.CompareTag("Dawg"))
         {
-            testCycle cycle = collision.transform.GetComponent<DogImageScript>().Cycle;
+            cycle = collision.transform.GetComponent<DogImageScript>().Cycle;
             cycle.hovering = true;
             if (!cycle.picked){
-                cycle.GenerateDog("Another Doggo");
-                if (cycle.pickednumber == 1)
-                    transform.position = cycle.previousPos;
-                if (cycle.pickednumber == 2)
-                    transform.position = cycle.previousPos2;
-                if (cycle.pickednumber == 3)
-                    transform.position = cycle.previousPos3;
-                if (cycle.pickednumber == 4)
-                    transform.position = cycle.previousPos4;
-                cycle.GenerateFamily(transform);
+                dogAnimator.Play("MovePaperAnime", 0);
+                transform.SetParent(dog.transform, true);
+                animation = true;
             }
         }
     }
+
+    void GenerateNewSet(testCycle cycle)
+    {
+        if (cycle.currentindex != 0)
+            cycle.dogqueue.RemoveAt(cycle.currentindex);
+        if (cycle.dogqueue.Count < cycle.maximumnumberofdogs)
+        {
+            if (cycle.dogsinthisday <= 5)
+                cycle.GenerateDog("Another Doggo");
+            cycle.dogsinthisday += 1;
+        }
+        if (cycle.pickednumber == 1)
+            transform.position = cycle.previousPos;
+        if (cycle.pickednumber == 2)
+            transform.position = cycle.previousPos2;
+        if (cycle.pickednumber == 3)
+            transform.position = cycle.previousPos3;
+        if (cycle.pickednumber == 4)
+            transform.position = cycle.previousPos4;
+        if (cycle.families.Count < cycle.numberofpeopleperday)
+            cycle.GenerateFamily(transform);
+        dog.transform.position = origPos;
+        transform.SetParent(parent, true);
+
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.transform.CompareTag("Dawg"))

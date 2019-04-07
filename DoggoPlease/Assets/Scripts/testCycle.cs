@@ -12,10 +12,12 @@ public class testCycle : MonoBehaviour
     public GameObject family3;
     public GameObject family4;
     internal List<Family> families = new List<Family>();
+    internal List<Dog> dogqueue = new List<Dog>();
     private List<Dog> dogs = new List<Dog>();
     private Transform dogObj;
     private Transform familyObj;
-    public Sprite[] sprites;
+    public Sprite[] spritesD;
+    public Sprite[] spritesH;
     internal Vector3 previousPos;
     internal Vector3 previousPos2;
     internal Vector3 previousPos3;
@@ -23,10 +25,21 @@ public class testCycle : MonoBehaviour
     internal bool picked;
     internal bool hovering;
     internal int pickednumber;
+    internal int currentindex;
+    [SerializeField]
+    internal int numberofdogsperday;
+    [SerializeField]
+    internal int numberofpeopleperday;
+    [SerializeField]
+    internal int maximumnumberofdogs;
+    internal int dogsinthisday;
 
     // Start is called before the first frame update
     void Start()
     {
+        maximumnumberofdogs = 10;
+        numberofdogsperday = 5;
+        numberofpeopleperday = 20;
         familyObj = canvas.transform.GetChild(4);
         dogObj = canvas.transform.GetChild(1);
         previousPos = family1.transform.position;
@@ -45,7 +58,7 @@ public class testCycle : MonoBehaviour
 
     public void GenerateFamily(Transform t)
     {
-        Family currentFam = new Family(Random.Range(1, 5), getRandomSize(), sprites[Random.Range(0, 4)], data.GetList(false,2), data.GetList(true,1));
+        Family currentFam = new Family(Random.Range(1, 5), getRandomSize(), spritesH[Random.Range(0, 10)], data.GetList(false,2), data.GetList(true,1));
         FamilieObj familyObjScript = t.GetComponent<FamilieObj>();
         familyObjScript.Setup(currentFam);
         families.Add(currentFam);
@@ -53,9 +66,26 @@ public class testCycle : MonoBehaviour
 
     public void GenerateDog(string name)
     {
-        Dog currentDog = new Dog(name, sprites[Random.Range(0, 4)], Random.Range(0, 20), getRandomSize(), true, data.GetList(true, 2));
+        Dog currentDog = new Dog(name, spritesD[Random.Range(0, 5)], Random.Range(0, 20), getRandomSize(), true, data.GetList(true, 2));
         DogObj dogObjScript = dogObj.GetComponent<DogObj>();
-        dogObjScript.Setup(currentDog);
+        dogqueue.Add(currentDog);
+        currentindex = dogqueue.Count - 1;
+        
+        dogObjScript.Setup(dogqueue[currentindex]);
+      
+    }
+    
+    public void AddDogToQueue()
+    {
+        if (dogqueue.Count < numberofdogsperday)
+        {
+            Dog currentDog = new Dog(name, spritesD[Random.Range(0, 4)], Random.Range(0, 20), getRandomSize(), true, data.GetList(true, 2));
+            DogObj dogObjScript = dogObj.GetComponent<DogObj>();
+            dogsinthisday += 1;
+            dogqueue.Add(currentDog);
+            currentindex = dogqueue.Count - 1;
+            dogObjScript.Setup(dogqueue[currentindex]);
+        }
     }
 
     string getRandomSize()
