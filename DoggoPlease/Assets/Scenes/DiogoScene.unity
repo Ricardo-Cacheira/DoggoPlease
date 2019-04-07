@@ -242,18 +242,19 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ff06178e77370084e934525306b09990, type: 3}
   - {fileID: 21300000, guid: 02cbb90554fe1094fa9775c3ac54eea4, type: 3}
   spritesH:
-  - {fileID: 21300000, guid: 07e1f3670b0957942988421b97b70636, type: 3}
   - {fileID: 21300000, guid: 3b5c6d8441a17904b9f5113a500fc671, type: 3}
   - {fileID: 21300000, guid: 3339a26c01292b44fa39fcfe27c46271, type: 3}
   - {fileID: 21300000, guid: 1ccb3920e75df9448bb1da47d608ad9c, type: 3}
+  - {fileID: 21300000, guid: 07e1f3670b0957942988421b97b70636, type: 3}
   - {fileID: 21300000, guid: 8597d7b6e720ee541890a5de14c2ddb0, type: 3}
   - {fileID: 21300000, guid: 96827b07d3f633b48aff7e6dc57dd6fd, type: 3}
   - {fileID: 21300000, guid: 059a138f63535454b811b13325a26abb, type: 3}
   - {fileID: 21300000, guid: 4847c8e7f7012f64c896547fe97e7ef2, type: 3}
+  - {fileID: 21300000, guid: b06fada5c4ca25146aee49c81e3727f8, type: 3}
   - {fileID: 21300000, guid: fc72cf8e962ae0b449fff38ca060c149, type: 3}
   - {fileID: 21300000, guid: 94e2b82851a436a41a1314c341299835, type: 3}
   numberofdogsperday: 5
-  numberofpeopleperday: 5
+  numberofpeopleperday: 20
   maximumnumberofdogs: 10
 --- !u!1 &194820396
 GameObject:
