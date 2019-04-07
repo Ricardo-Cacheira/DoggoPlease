@@ -27,6 +27,9 @@ public class FamilieObj : MonoBehaviour
     private Vector3 origPos;
     private Transform parent;
 
+    //FMOD #fudgeMaster
+    private bool wooshPlayed;
+
     private void Start()
     {
         parent = transform.parent;
@@ -75,6 +78,9 @@ public class FamilieObj : MonoBehaviour
         //}
         currentFam = fam;
 
+        //FMOD #fudgeMaster
+        wooshPlayed = false;
+
     }
 
     private void Update()
@@ -102,6 +108,12 @@ public class FamilieObj : MonoBehaviour
                 dogAnimator.Play("MovePaperAnime", 0);
                 transform.SetParent(dog.transform, true);
                 animation = true;
+                //FMOD #fudgeMaster
+                if (wooshPlayed == false)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/woosh");
+                    wooshPlayed = true;
+                }
             }
         }
     }
