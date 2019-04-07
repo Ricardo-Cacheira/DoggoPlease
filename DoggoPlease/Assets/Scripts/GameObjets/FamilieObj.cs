@@ -58,7 +58,14 @@ public class FamilieObj : MonoBehaviour
             testCycle cycle = collision.transform.GetComponent<DogImageScript>().Cycle;
             cycle.hovering = true;
             if (!cycle.picked){
-                cycle.GenerateDog("Another Doggo");
+                if(cycle.currentindex != 0)
+                cycle.dogqueue.RemoveAt(cycle.currentindex);
+                if (cycle.dogqueue.Count < cycle.maximumnumberofdogs)
+                {
+                   if(cycle.dogsinthisday <= 5)
+                    cycle.GenerateDog("Another Doggo");
+                    cycle.dogsinthisday += 1;
+                }
                 if (cycle.pickednumber == 1)
                     transform.position = cycle.previousPos;
                 if (cycle.pickednumber == 2)
@@ -67,6 +74,7 @@ public class FamilieObj : MonoBehaviour
                     transform.position = cycle.previousPos3;
                 if (cycle.pickednumber == 4)
                     transform.position = cycle.previousPos4;
+                if(cycle.families.Count < cycle.numberofpeopleperday)
                 cycle.GenerateFamily(transform);
             }
         }

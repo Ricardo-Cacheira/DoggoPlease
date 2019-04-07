@@ -12,6 +12,7 @@ public class testCycle : MonoBehaviour
     public GameObject family3;
     public GameObject family4;
     internal List<Family> families = new List<Family>();
+    internal List<Dog> dogqueue = new List<Dog>();
     private List<Dog> dogs = new List<Dog>();
     private Transform dogObj;
     private Transform familyObj;
@@ -23,10 +24,21 @@ public class testCycle : MonoBehaviour
     internal bool picked;
     internal bool hovering;
     internal int pickednumber;
+    internal int currentindex;
+    [SerializeField]
+    internal int numberofdogsperday;
+    [SerializeField]
+    internal int numberofpeopleperday;
+    [SerializeField]
+    internal int maximumnumberofdogs;
+    internal int dogsinthisday;
 
     // Start is called before the first frame update
     void Start()
     {
+        maximumnumberofdogs = 10;
+        numberofdogsperday = 5;
+        numberofpeopleperday = 20;
         familyObj = canvas.transform.GetChild(4);
         dogObj = canvas.transform.GetChild(1);
         previousPos = family1.transform.position;
@@ -55,7 +67,24 @@ public class testCycle : MonoBehaviour
     {
         Dog currentDog = new Dog(name, sprites[Random.Range(0, 4)], Random.Range(0, 20), getRandomSize(), true, data.GetList(true, 2));
         DogObj dogObjScript = dogObj.GetComponent<DogObj>();
-        dogObjScript.Setup(currentDog);
+        dogqueue.Add(currentDog);
+        currentindex = dogqueue.Count - 1;
+        
+        dogObjScript.Setup(dogqueue[currentindex]);
+      
+    }
+    
+    public void AddDogToQueue()
+    {
+        if (dogqueue.Count < numberofdogsperday)
+        {
+            Dog currentDog = new Dog(name, sprites[Random.Range(0, 4)], Random.Range(0, 20), getRandomSize(), true, data.GetList(true, 2));
+            DogObj dogObjScript = dogObj.GetComponent<DogObj>();
+            dogsinthisday += 1;
+            dogqueue.Add(currentDog);
+            currentindex = dogqueue.Count - 1;
+            dogObjScript.Setup(dogqueue[currentindex]);
+        }
     }
 
     string getRandomSize()
