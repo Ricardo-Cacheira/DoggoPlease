@@ -25,6 +25,14 @@ public class STEmitter : MonoBehaviour
 	
 	void OnDestroy()
     {
+        soundtrack.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+		soundtrack.release();
+    }
+	/*
+	void OnDisable()
+    {
+		soundtrack.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         soundtrack.release();
     }
+	*/
 }
