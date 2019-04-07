@@ -2665,7 +2665,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -66, y: -35.45996}
+  m_AnchoredPosition: {x: -66, y: -35.4599}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &997489447
@@ -4190,6 +4190,59 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578631647276562149, guid: 0bddbb5582aca4947a29866a522f97d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 321
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578631647276562149, guid: 0bddbb5582aca4947a29866a522f97d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 199
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578631647207379887, guid: 0bddbb5582aca4947a29866a522f97d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578631648498573324, guid: 0bddbb5582aca4947a29866a522f97d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -120
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578631648551326695, guid: 0bddbb5582aca4947a29866a522f97d2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -185
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578631647207379886, guid: 0bddbb5582aca4947a29866a522f97d2,
+        type: 3}
+      propertyPath: m_Text
+      value: '1
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578631647276562148, guid: 0bddbb5582aca4947a29866a522f97d2,
+        type: 3}
+      propertyPath: m_Text
+      value: '1
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578631648498573327, guid: 0bddbb5582aca4947a29866a522f97d2,
+        type: 3}
+      propertyPath: m_Text
+      value: '1
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578631648551326694, guid: 0bddbb5582aca4947a29866a522f97d2,
+        type: 3}
+      propertyPath: m_Text
+      value: '1
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bddbb5582aca4947a29866a522f97d2, type: 3}
