@@ -34,6 +34,7 @@ public class testCycle : MonoBehaviour
     [SerializeField]
     internal int maximumnumberofdogs;
     internal int dogsinthisday;
+    int numberofsprite;
 
     // Start is called before the first frame update
     void Start()
@@ -59,7 +60,28 @@ public class testCycle : MonoBehaviour
 
     public void GenerateFamily(Transform t)
     {
-        Family currentFam = new Family(Random.Range(1, 5), getRandomSize(), spritesH[Random.Range(0, 10)], data.GetList(false,2), data.GetList(true,1));
+        int numberofpeople = Random.Range(1, 5);
+
+        if (numberofpeople == 1)
+        {
+            numberofsprite = Random.Range(0, 3);
+        }
+
+        if (numberofpeople == 2)
+        {
+            numberofsprite = Random.Range(3, 7);
+        }
+
+        if (numberofpeople == 3)
+        {
+            numberofsprite = Random.Range(7, 9);
+        }
+
+        if (numberofpeople == 4)
+        {
+            numberofsprite = Random.Range(9, 11);
+        }
+        Family currentFam = new Family(numberofpeople, getRandomSize(), spritesH[numberofsprite], data.GetList(false,2), data.GetList(true,1));
         FamilieObj familyObjScript = t.GetComponent<FamilieObj>();
         familyObjScript.Setup(currentFam);
         families.Add(currentFam);
