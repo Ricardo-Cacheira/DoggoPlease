@@ -89,7 +89,7 @@ public class testCycle : MonoBehaviour
 
     public void GenerateDog(string name)
     {
-        Dog currentDog = new Dog(name, spritesD[Random.Range(0, 5)], Random.Range(0, 20), getRandomSize(), true, data.GetList(true, 2));
+        Dog currentDog = new Dog(name, spritesD[Random.Range(0, 8)], Random.Range(0, 20), getRandomSize(), true, data.GetList(true, 2));
         DogObj dogObjScript = dogObj.GetComponent<DogObj>();
         dogqueue.Add(currentDog);
         currentindex = dogqueue.Count - 1;
