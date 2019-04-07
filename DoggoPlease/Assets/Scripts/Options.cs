@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class Options : MonoBehaviour
 {
     public bool on = false;
+    public bool cr = false;
     public GameObject panel;
+    public GameObject credits;
     public SoundManager soundManager;
     public Slider st;
     public Slider sfx;
@@ -21,6 +23,12 @@ public class Options : MonoBehaviour
     {
         on = !on;
         panel.SetActive(on);
+    }
+
+    public void Credits()
+    {
+        cr = !cr;
+        credits.SetActive(cr);
     }
 
     public void UpdateValues()
