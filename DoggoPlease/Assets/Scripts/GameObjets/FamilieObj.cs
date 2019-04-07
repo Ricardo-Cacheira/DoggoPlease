@@ -125,7 +125,7 @@ public class FamilieObj : MonoBehaviour
         if (cycle.dogqueue.Count < cycle.maximumnumberofdogs)
         {
             if (cycle.dogsinthisday <= 5)
-                cycle.GenerateDog("Another Doggo");
+                cycle.GenerateDog(cycle.DoggoName());
             cycle.dogsinthisday += 1;
         }
         if (cycle.pickednumber == 1)
