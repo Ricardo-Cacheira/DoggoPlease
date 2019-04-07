@@ -25,9 +25,11 @@ public class FamilieObj : MonoBehaviour
     private bool animation;
     private testCycle cycle;
     private Vector3 origPos;
+    private Transform parent;
 
     private void Start()
     {
+        parent = transform.parent;
         origPos = dog.transform.position;
         dogAnimator = dog.GetComponent<Animator>();
         imageComp = transform.GetChild(1).GetComponent<Image>();
@@ -79,7 +81,7 @@ public class FamilieObj : MonoBehaviour
         if (animation)
         {
             timer += 0.1f;
-            if (timer > 4)
+            if (timer > 3f)
             {
                 GenerateNewSet(cycle);
                 animation = false;
@@ -96,25 +98,8 @@ public class FamilieObj : MonoBehaviour
             cycle = collision.transform.GetComponent<DogImageScript>().Cycle;
             cycle.hovering = true;
             if (!cycle.picked){
-                if(cycle.currentindex != 0)
-                cycle.dogqueue.RemoveAt(cycle.currentindex);
-                if (cycle.dogqueue.Count < cycle.maximumnumberofdogs)
-                {
-                   if(cycle.dogsinthisday <= 5)
-                    cycle.GenerateDog("Another Doggo");
-                    cycle.dogsinthisday += 1;
-                }
-                if (cycle.pickednumber == 1)
-                    transform.position = cycle.previousPos;
-                if (cycle.pickednumber == 2)
-                    transform.position = cycle.previousPos2;
-                if (cycle.pickednumber == 3)
-                    transform.position = cycle.previousPos3;
-                if (cycle.pickednumber == 4)
-                    transform.position = cycle.previousPos4;
-                if(cycle.families.Count < cycle.numberofpeopleperday)
-                cycle.GenerateFamily(transform);
                 dogAnimator.Play("MovePaperAnime", 0);
+                transform.SetParent(dog.transform, true);
                 animation = true;
             }
         }
@@ -122,7 +107,14 @@ public class FamilieObj : MonoBehaviour
 
     void GenerateNewSet(testCycle cycle)
     {
-        cycle.GenerateDog("Another Doggo");
+        if (cycle.currentindex != 0)
+            cycle.dogqueue.RemoveAt(cycle.currentindex);
+        if (cycle.dogqueue.Count < cycle.maximumnumberofdogs)
+        {
+            if (cycle.dogsinthisday <= 5)
+                cycle.GenerateDog("Another Doggo");
+            cycle.dogsinthisday += 1;
+        }
         if (cycle.pickednumber == 1)
             transform.position = cycle.previousPos;
         if (cycle.pickednumber == 2)
@@ -131,9 +123,10 @@ public class FamilieObj : MonoBehaviour
             transform.position = cycle.previousPos3;
         if (cycle.pickednumber == 4)
             transform.position = cycle.previousPos4;
-        cycle.GenerateFamily(transform);
-
+        if (cycle.families.Count < cycle.numberofpeopleperday)
+            cycle.GenerateFamily(transform);
         dog.transform.position = origPos;
+        transform.SetParent(parent, true);
 
     }
 

@@ -235,15 +235,26 @@ MonoBehaviour:
   family2: {fileID: 1207867796}
   family3: {fileID: 244733181}
   family4: {fileID: 1287468127}
-  sprites:
+  spritesD:
   - {fileID: 21300000, guid: 5dbd36d67d9e4bd4f8a7e9e9a1c6a2ff, type: 3}
+  - {fileID: 21300000, guid: 78ea62ef5d105da4db449f5932ddfcff, type: 3}
   - {fileID: 21300000, guid: 4ddf85c6ad2fd0e45a89458246e51e30, type: 3}
+  - {fileID: 21300000, guid: ff06178e77370084e934525306b09990, type: 3}
+  - {fileID: 21300000, guid: 02cbb90554fe1094fa9775c3ac54eea4, type: 3}
+  spritesH:
   - {fileID: 21300000, guid: 07e1f3670b0957942988421b97b70636, type: 3}
+  - {fileID: 21300000, guid: 3b5c6d8441a17904b9f5113a500fc671, type: 3}
   - {fileID: 21300000, guid: 3339a26c01292b44fa39fcfe27c46271, type: 3}
+  - {fileID: 21300000, guid: 1ccb3920e75df9448bb1da47d608ad9c, type: 3}
+  - {fileID: 21300000, guid: 8597d7b6e720ee541890a5de14c2ddb0, type: 3}
+  - {fileID: 21300000, guid: 96827b07d3f633b48aff7e6dc57dd6fd, type: 3}
   - {fileID: 21300000, guid: 059a138f63535454b811b13325a26abb, type: 3}
-  numberofdogsperday: 0
-  numberofpeopleperday: 0
-  maximumnumberofdogs: 0
+  - {fileID: 21300000, guid: 4847c8e7f7012f64c896547fe97e7ef2, type: 3}
+  - {fileID: 21300000, guid: fc72cf8e962ae0b449fff38ca060c149, type: 3}
+  - {fileID: 21300000, guid: 94e2b82851a436a41a1314c341299835, type: 3}
+  numberofdogsperday: 5
+  numberofpeopleperday: 5
+  maximumnumberofdogs: 10
 --- !u!1 &194820396
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,8 +463,8 @@ GameObject:
   m_Component:
   - component: {fileID: 244733182}
   - component: {fileID: 244733185}
-  - component: {fileID: 244733184}
   - component: {fileID: 244733183}
+  - component: {fileID: 244733184}
   - component: {fileID: 244733186}
   m_Layer: 5
   m_Name: Family3
@@ -498,6 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ced8ced113f5544eba0a2f97afa3c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dog: {fileID: 1910768182}
 --- !u!114 &244733184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -948,9 +960,9 @@ GameObject:
   m_Component:
   - component: {fileID: 495286916}
   - component: {fileID: 495286918}
+  - component: {fileID: 495286919}
   - component: {fileID: 495286917}
   - component: {fileID: 495286920}
-  - component: {fileID: 495286919}
   m_Layer: 5
   m_Name: Family1
   m_TagString: Dog
@@ -1031,6 +1043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ced8ced113f5544eba0a2f97afa3c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dog: {fileID: 1910768182}
 --- !u!65 &495286920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2248,8 +2261,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1207867797}
   - component: {fileID: 1207867800}
-  - component: {fileID: 1207867799}
   - component: {fileID: 1207867798}
+  - component: {fileID: 1207867799}
   - component: {fileID: 1207867801}
   m_Layer: 5
   m_Name: Family2
@@ -2294,6 +2307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ced8ced113f5544eba0a2f97afa3c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dog: {fileID: 1910768182}
 --- !u!114 &1207867799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2467,8 +2481,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1287468128}
   - component: {fileID: 1287468131}
-  - component: {fileID: 1287468130}
   - component: {fileID: 1287468129}
+  - component: {fileID: 1287468130}
   - component: {fileID: 1287468132}
   m_Layer: 5
   m_Name: Family4
@@ -2513,6 +2527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ced8ced113f5544eba0a2f97afa3c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dog: {fileID: 1910768182}
 --- !u!114 &1287468130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3271,6 +3286,7 @@ GameObject:
   - component: {fileID: 1910768186}
   - component: {fileID: 1910768185}
   - component: {fileID: 1910768184}
+  - component: {fileID: 1910768187}
   m_Layer: 5
   m_Name: DogInf
   m_TagString: Untagged
@@ -3322,7 +3338,7 @@ MonoBehaviour:
   ageComp: {fileID: 0}
   genderComp: {fileID: 0}
   traitsComp: {fileID: 0}
-  typingSecs: 1.2
+  typingSecs: 0
 --- !u!114 &1910768185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3360,6 +3376,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910768182}
   m_CullTransparentMesh: 0
+--- !u!95 &1910768187
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910768182}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d083f91a6588ee47b0ef916233f111b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1942041281
 GameObject:
   m_ObjectHideFlags: 0
