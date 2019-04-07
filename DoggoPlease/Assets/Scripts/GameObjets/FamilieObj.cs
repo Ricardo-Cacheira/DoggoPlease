@@ -9,12 +9,14 @@ public class FamilieObj : MonoBehaviour
     private string aggregate;
     private string residence;
     private List<string> traits = new List<string>();
-    private List<int> traitsValues = new List<int>();
+    private List<string> preferences = new List<string>();
+    // private List<int> traitsValues = new List<int>();
 
     private Image imageComp;
     private Text aggregateComp;
     private Text residenceComp;
     private Text traitComp;
+    private Text preferencesComp;
 
     private Family currentFam;
     private void Start()
@@ -28,13 +30,18 @@ public class FamilieObj : MonoBehaviour
     public void Setup(Family fam)
     {
         traits.Clear();
+        preferences.Clear();
         image = fam.image;
         aggregate = fam.aggregate.ToString();
         residence = fam.residence;
-        foreach (Trait t in fam.prefencers)
+        foreach (Trait t in fam.traits)
         {
-                traitsValues.Add(t.value);
-                traits.Add(t.name);
+            // traitsValues.Add(t.value);
+            traits.Add(t.name);
+        }
+        foreach (Trait t in fam.prefenrences)
+        {
+            preferences.Add(t.name);
         }
 
         imageComp.sprite = image;
@@ -47,14 +54,21 @@ public class FamilieObj : MonoBehaviour
             else
                 traitComp.text += traits[i];
         }
+        preferencesComp.text = "";
+        for (int i = 0; i < preferences.Count; i++) {
+            if (i > 0)
+                preferencesComp.text += " " + preferences[i];
+            else
+                preferencesComp.text += preferences[i];
+        }
         currentFam = fam;
 
     }
 
     private void OnTriggerStay(Collider collision)
     {
-          if (collision.transform.CompareTag("Dawg"))
-           {
+        if (collision.transform.CompareTag("Dawg"))
+        {
             testCycle cycle = collision.transform.GetComponent<DogImageScript>().Cycle;
             cycle.hovering = true;
             if (!cycle.picked){

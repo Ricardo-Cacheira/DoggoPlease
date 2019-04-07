@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88479f8ad12b01147adf810d9e79dfed, type: 3}
   m_Name: Quiet
   m_EditorClassIdentifier: 
-  name: 
+  name: Quiet
   value: 0
-  conflicting: []
+  conflicting:
+  - {fileID: 11400000, guid: a044fa179f25d45438380ec4ff91745e, type: 2}
   bestMatches: []
   badMatches: []

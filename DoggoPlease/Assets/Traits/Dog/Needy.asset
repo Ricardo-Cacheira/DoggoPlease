@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88479f8ad12b01147adf810d9e79dfed, type: 3}
   m_Name: Needy
   m_EditorClassIdentifier: 
-  name: 
+  name: Needy
   value: 0
   conflicting: []
   bestMatches: []

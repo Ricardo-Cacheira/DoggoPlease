@@ -10,9 +10,9 @@ public class Dog
     public int age;
     public string size;
     public bool male;
-    public Trait[] traits;
+    public List<Trait> traits;
 
-    public Dog(string name_, Sprite image_, int age_, string size_, bool gender_, Trait[] traits_)
+    public Dog(string name_, Sprite image_, int age_, string size_, bool gender_, List<Trait> traits_)
     {
         name = name_;
         image = image_;

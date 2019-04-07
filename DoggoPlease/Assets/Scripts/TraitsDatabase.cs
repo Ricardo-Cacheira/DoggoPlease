@@ -13,24 +13,34 @@ public class TraitsDatabase : ScriptableObject
 
 	private static System.Random rnd = new System.Random();
 
-	public Trait[] GetList(bool dog, int amount)
+	public List<Trait> GetList(bool dog, int amount)
 	{
 		List<Trait> list = new List<Trait>();
 		for (int i = 0; i < amount; i++)
 		{
 			list.Add(GetNewTrait(list, dog));
 		}
-		return list.ToArray();
+		return list;
 	}
 
-	public int EvaluteMatch(List<Trait> dog, List<Trait> family, List<Trait> preferences)
+	public int EvaluteMatch(Dog dog, Family family)
 	{
 		int points = 0;
+		
+		if (dog.size.Equals(family.residence) || (dog.size == "Medium" &&  family.residence == "Large") || (dog.size == "Small" &&  (family.residence == "Large" || family.residence == "Medium")))
+		{
+			points++;
+		}
+
+		if (dog.size == "Large" && family.residence == "Small")
+		{
+			points--;
+		}
 
 		//check good
-		foreach (var d in dog)
+		foreach (var d in dog.traits)
 		{
-			foreach (var f in family)
+			foreach (var f in family.traits)
 			{
 				if(d.bestMatches.Contains(f)) {points++;}
 				else if(d.badMatches.Contains(f)) {points--;}
@@ -38,9 +48,9 @@ public class TraitsDatabase : ScriptableObject
 			}
 		}
 
-		foreach (var p in preferences)
+		foreach (var p in family.prefenrences)
 		{
-			if(dog.Contains(p)) {points++;}
+			if(dog.traits.Contains(p)) {points++;}
 		}
 
 		return points;

@@ -45,7 +45,7 @@ public class testCycle : MonoBehaviour
 
     public void GenerateFamily(Transform t)
     {
-        Family currentFam = new Family(Random.Range(1, 5), getRandomSize(), sprites[Random.Range(0, 4)], data.familyTraits);
+        Family currentFam = new Family(Random.Range(1, 5), getRandomSize(), sprites[Random.Range(0, 4)], data.GetList(false,2), data.GetList(true,1));
         FamilieObj familyObjScript = t.GetComponent<FamilieObj>();
         familyObjScript.Setup(currentFam);
         families.Add(currentFam);
