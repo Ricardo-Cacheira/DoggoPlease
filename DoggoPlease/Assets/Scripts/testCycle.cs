@@ -54,8 +54,17 @@ public class testCycle : MonoBehaviour
             GenerateFamily(t);
         }
 
-        GenerateDog("Doggo");
+        GenerateDog("Mel");
       //  dogs.Add(currentDog);
+    }
+
+    public string DoggoName()
+    {
+        string[] names =
+        { 
+            "Kaia", "Zeus", "Snoop", "Hairy Paw-ter", "Karl Barx", "Bone, James Bone", "Mel", "Esperança", "Unka", "Yara", "Quinoa", "Happy", "Fuga", "Belinha"
+        };
+        return names[Random.Range(0, names.Length)];;
     }
 
     public void GenerateFamily(Transform t)
