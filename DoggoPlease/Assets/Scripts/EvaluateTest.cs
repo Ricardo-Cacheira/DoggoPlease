@@ -11,7 +11,7 @@ public class EvaluateTest : MonoBehaviour
     public List<Trait> preferences;
 
     private void Start() {
-        Debug.Log(data.EvaluteMatch(dog,family,preferences));
+        // Debug.Log(data.EvaluteMatch(dog,family,preferences));
     }
 
 }

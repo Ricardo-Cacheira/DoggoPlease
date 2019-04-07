@@ -708,6 +708,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6299490005974301947, guid: 5f459067e7c0ba246a98ac51415735e1,
+        type: 3}
+      propertyPath: soundtrackEvent2
+      value: event:/soundtrack/gameST
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299490005974301947, guid: 5f459067e7c0ba246a98ac51415735e1,
+        type: 3}
+      propertyPath: soundtrackEvent
+      value: event:/soundtrack/menuST
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299490005974301947, guid: 5f459067e7c0ba246a98ac51415735e1,
+        type: 3}
+      propertyPath: volume1
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299490005974301947, guid: 5f459067e7c0ba246a98ac51415735e1,
+        type: 3}
+      propertyPath: volume2
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299490005974301947, guid: 5f459067e7c0ba246a98ac51415735e1,
+        type: 3}
+      propertyPath: ambientEvent
+      value: event:/ambient
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299490005974301947, guid: 5f459067e7c0ba246a98ac51415735e1,
+        type: 3}
+      propertyPath: volume3
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 6299490005974301940, guid: 5f459067e7c0ba246a98ac51415735e1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -762,36 +792,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6299490005974301947, guid: 5f459067e7c0ba246a98ac51415735e1,
-        type: 3}
-      propertyPath: soundtrackEvent2
-      value: event:/soundtrack/gameST
-      objectReference: {fileID: 0}
-    - target: {fileID: 6299490005974301947, guid: 5f459067e7c0ba246a98ac51415735e1,
-        type: 3}
-      propertyPath: soundtrackEvent
-      value: event:/soundtrack/menuST
-      objectReference: {fileID: 0}
-    - target: {fileID: 6299490005974301947, guid: 5f459067e7c0ba246a98ac51415735e1,
-        type: 3}
-      propertyPath: volume1
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6299490005974301947, guid: 5f459067e7c0ba246a98ac51415735e1,
-        type: 3}
-      propertyPath: volume2
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6299490005974301947, guid: 5f459067e7c0ba246a98ac51415735e1,
-        type: 3}
-      propertyPath: ambientEvent
-      value: event:/ambient
-      objectReference: {fileID: 0}
-    - target: {fileID: 6299490005974301947, guid: 5f459067e7c0ba246a98ac51415735e1,
-        type: 3}
-      propertyPath: volume3
-      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f459067e7c0ba246a98ac51415735e1, type: 3}
