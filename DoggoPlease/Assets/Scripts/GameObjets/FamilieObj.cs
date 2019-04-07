@@ -55,6 +55,7 @@ public class FamilieObj : MonoBehaviour
             preferences.Add(t.name);
         }
 
+        
         imageComp.sprite = image;
         aggregateComp.text = aggregate;
         residenceComp.text = residence;
