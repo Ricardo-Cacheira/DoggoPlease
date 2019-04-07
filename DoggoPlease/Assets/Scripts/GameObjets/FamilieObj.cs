@@ -21,6 +21,7 @@ public class FamilieObj : MonoBehaviour
     private Family currentFam;
     public GameObject dog;
     private Animator dogAnimator;
+    public Animator machineAnimator;
     private float timer;
     private bool animation;
     private testCycle cycle;
@@ -105,7 +106,9 @@ public class FamilieObj : MonoBehaviour
             cycle = collision.transform.GetComponent<DogImageScript>().Cycle;
             cycle.hovering = true;
             if (!cycle.picked){
+                machineAnimator.Play("Typing", 0);
                 dogAnimator.Play("MovePaperAnime", 0);
+               
                 transform.SetParent(dog.transform, true);
                 animation = true;
                 //FMOD #fudgeMaster
