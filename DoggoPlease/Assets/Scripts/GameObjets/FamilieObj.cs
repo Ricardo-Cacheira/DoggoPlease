@@ -107,9 +107,8 @@ public class FamilieObj : MonoBehaviour
             cycle = collision.transform.GetComponent<DogImageScript>().Cycle;
             cycle.hovering = true;
             if (!cycle.picked){
-                machineAnimator.Play("Typing", 0);
                 dogAnimator.Play("MovePaperAnime", 0);
-               
+                machineAnimator.Play("Typing", 0);
                 transform.SetParent(dog.transform, true);
                 animation = true;
                 //FMOD #fudgeMaster
@@ -121,6 +120,8 @@ public class FamilieObj : MonoBehaviour
             }
         }
     }
+
+
 
     void GenerateNewSet(testCycle cycle)
     {

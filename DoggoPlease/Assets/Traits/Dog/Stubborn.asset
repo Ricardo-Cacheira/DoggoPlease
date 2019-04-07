@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88479f8ad12b01147adf810d9e79dfed, type: 3}
+  m_Name: Stubborn
+  m_EditorClassIdentifier: 
+  name: Stubborn
+  value: 0
+  conflicting:
+  - {fileID: 11400000, guid: 2f716a8effb2174418e461a329f03648, type: 2}
+  bestMatches:
+  - {fileID: 11400000, guid: 27ed4eb24396209479635b43cf58811c, type: 2}
+  - {fileID: 11400000, guid: 688e6ce3111c7244a86f6f19aa830f71, type: 2}
+  badMatches:
+  - {fileID: 11400000, guid: bc10dbd63810b2949a54c17b0674997e, type: 2}
+  - {fileID: 11400000, guid: 07bf7555005cbf34a8500aadbc7dddd4, type: 2}

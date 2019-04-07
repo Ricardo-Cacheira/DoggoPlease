@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88479f8ad12b01147adf810d9e79dfed, type: 3}
+  m_Name: Energetic
+  m_EditorClassIdentifier: 
+  name: Energetic
+  value: 0
+  conflicting:
+  - {fileID: 11400000, guid: 6be9d7737cfe9434b9c9305dd380718c, type: 2}
+  bestMatches:
+  - {fileID: 11400000, guid: fbbd1564c19bf554ea231aeed4e89dc4, type: 2}
+  - {fileID: 11400000, guid: 3082df7b05d826941ba9a24a43a5c231, type: 2}
+  badMatches:
+  - {fileID: 11400000, guid: 8555d88eaca6e6b4ab165f71b0da15a5, type: 2}
+  - {fileID: 11400000, guid: 07bf7555005cbf34a8500aadbc7dddd4, type: 2}

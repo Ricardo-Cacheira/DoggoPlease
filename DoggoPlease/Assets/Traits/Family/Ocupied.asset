@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88479f8ad12b01147adf810d9e79dfed, type: 3}
   m_Name: Ocupied
   m_EditorClassIdentifier: 
-  name: Occupied
+  name: Busy Schedule
   value: 0
   conflicting: []
   bestMatches: []

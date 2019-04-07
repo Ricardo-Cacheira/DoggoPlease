@@ -37,4 +37,9 @@ public class Options : MonoBehaviour
         soundManager.volume2 = (int)st.value;
         soundManager.volume3 = (int)sfx.value;
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
