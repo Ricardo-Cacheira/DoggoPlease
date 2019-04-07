@@ -19,6 +19,8 @@ public class DogObj : MonoBehaviour
     public Text ageComp;
     public Text genderComp;
     public Text traitsComp;
+
+    internal Dog dog;
 	
 	//FMOD 
 	FMOD.Studio.EventInstance bark; 
@@ -45,6 +47,7 @@ public class DogObj : MonoBehaviour
     public void Setup(Dog dog)
     {
         traits.Clear();
+        this.dog = dog;
         image = dog.image;
         name = dog.name;
         size = dog.size;

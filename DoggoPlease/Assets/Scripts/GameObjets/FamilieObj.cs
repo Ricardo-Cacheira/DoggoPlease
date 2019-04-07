@@ -40,6 +40,7 @@ public class FamilieObj : MonoBehaviour
         aggregateComp = transform.GetChild(2).GetComponent<Text>();
         residenceComp = transform.GetChild(3).GetComponent<Text>();
         traitComp = transform.GetChild(4).GetComponent<Text>();
+        preferencesComp = transform.GetChild(5).GetComponent<Text>();
     }
 
     public void Setup(Family fam)
@@ -70,13 +71,13 @@ public class FamilieObj : MonoBehaviour
             else
                 traitComp.text += traits[i];
         }
-        //preferencesComp.text = "";
-        //for (int i = 0; i < preferences.Count; i++) {
-        //    if (i > 0)
-        //        preferencesComp.text += " " + preferences[i];
-        //    else
-        //        preferencesComp.text += preferences[i];
-        //}
+        preferencesComp.text = "";
+        for (int i = 0; i < preferences.Count; i++) {
+            if (i > 0)
+                preferencesComp.text += " " + preferences[i];
+            else
+                preferencesComp.text += preferences[i];
+        }
         currentFam = fam;
 
         //FMOD #fudgeMaster
@@ -123,12 +124,18 @@ public class FamilieObj : MonoBehaviour
 
     void GenerateNewSet(testCycle cycle)
     {
+        Dog newDog = dog.GetComponent<DogObj>().dog;
+        cycle.dayScore.Add(cycle.data.EvaluteMatch(newDog, currentFam));
         if (cycle.currentindex != 0)
             cycle.dogqueue.RemoveAt(cycle.currentindex);
         if (cycle.dogqueue.Count < cycle.maximumnumberofdogs)
         {
             if (cycle.dogsinthisday <= 5)
                 cycle.GenerateDog(cycle.DoggoName());
+            else
+            {
+                cycle.endDay();
+            }
             cycle.dogsinthisday += 1;
         }
         if (cycle.pickednumber == 1)

@@ -26,6 +26,7 @@ public class TraitsDatabase : ScriptableObject
 	public int EvaluteMatch(Dog dog, Family family)
 	{
 		int points = 0;
+        Debug.Log(family);
 		
 		if (dog.size.Equals(family.residence) || (dog.size == "Medium" &&  family.residence == "Large") || (dog.size == "Small" &&  (family.residence == "Large" || family.residence == "Medium")))
 		{
