@@ -253,7 +253,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fc72cf8e962ae0b449fff38ca060c149, type: 3}
   - {fileID: 21300000, guid: 94e2b82851a436a41a1314c341299835, type: 3}
   numberofdogsperday: 5
-  numberofpeopleperday: 5
+  numberofpeopleperday: 20
   maximumnumberofdogs: 10
 --- !u!1 &194820396
 GameObject:
